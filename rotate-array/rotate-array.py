@@ -9,3 +9,5 @@ class Solution:
             nums[:k] = a
             nums[k:] = b
             # print(nums)
+        
+        # in-place로 뒤집는 함수를 만들어서 앞뒤로 뒤집음
