@@ -1,25 +1,26 @@
+import random
+
 class RandomizedSet:
 
     def __init__(self):
-        self.data = dict()
+        self.data = set()
 
     def insert(self, val: int) -> bool:
         if val in self.data:
             return False
         else:
-            self.data[val] = 1 # it can be any val
+            self.data.add(val)
             return True
 
     def remove(self, val: int) -> bool:
         if val in self.data:
-            self.data.pop(val)
+            self.data.remove(val)
             return True
         else:
             return False
 
     def getRandom(self) -> int:
-        val_arr = list(self.data.keys())
-        import random
+        val_arr = list(self.data)
         n = len(val_arr)
         i = random.randint(1, n)
         return val_arr[i-1]
