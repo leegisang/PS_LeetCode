@@ -17,17 +17,9 @@ class Solution:
                 if i >= 5:
                     poss4 = nums[i-5] + nums[i]
                     max_p = max(poss0, poss1, poss2, poss3, poss4)
-
                 else:
-                    poss4= 0
                     max_p = max(poss0, poss1, poss2, poss3)
-                print(nums)
-                print(nums[i-3:i+1])
-                print(poss0)
-                print(poss1, poss2, poss3)
-                print(poss4)
-                print(max_p)
-                print()
+
                 if poss0 == max_p:
                     nums[i-1] = max_p
                 else:
